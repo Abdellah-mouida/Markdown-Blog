@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
+    <title>Show Article</title>
+  </head>
+  <body>
+    <div class="show-artc">
+      <h1 class="title"><%= article.title %></h1>
+      <h6><%= new Date(article.createdAt).toLocaleDateString() %></h6>
+    </div>
+
+    <div class="markdown"><%- article.sanitizedHTML %></div>
+
+    <div class="wrap">
+      <a href="/articles"><button class="primary">All articles</button></a>
+      <a href="/articles/edit/<%= article.id %>"
+        ><button class="warning">Edit</button></a
+      >
+    </div>
+  </body>
+</html>

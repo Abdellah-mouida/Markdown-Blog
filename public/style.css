@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Poppins;
+  box-sizing: border-box;
+}
+body {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  margin: 1rem auto;
+  gap: 30px;
+}
+.title {
+  font-size: 7vmin;
+  text-align: center;
+}
+.wrap {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+button {
+  padding: 0.8rem 3rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  outline: none;
+  border: none;
+
+  cursor: pointer;
+}
+.succss {
+  background-color: #00ff80;
+  color: #111;
+}
+.cancel {
+  background-color: #ddd;
+  color: #111;
+}
+.primary {
+  background-color: #0044ff;
+  color: #eee;
+}
+.card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border: solid 1px #11111155;
+  padding: 1rem;
+  border-radius: 12px;
+}
+.card h4 {
+  font-size: 1.2rem;
+}
+.card h6 {
+  opacity: 0.8;
+  font-size: 1rem;
+}
+.card p {
+  font-size: 1rem;
+}
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.danger {
+  background-color: #ff1122;
+  color: #eee;
+}
+.warning {
+  background-color: #ffb011;
+  color: #111;
+}
+.markdown {
+  padding: 1.2rem;
+  border-radius: 15px;
+  border: solid 1px #11111155;
+  line-height: 2;
+  text-align: justify;
+}
+.show-artc {
+  padding: 1rem;
+}
+.show-artc h6 {
+  opacity: 0.8;
+  text-align: center;
+  font-weight: normal;
+  font-size: 1.2rem;
+}
+.form-controle {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+.form-controle input,
+.form-controle textarea {
+  padding: 10px 15px;
+  border-radius: 12px;
+  outline: none;
+  font-size: 1rem;
+  border: solid 1.5px #11111155;
+}
+.form-controle textarea {
+  resize: vertical;
+  height: 200px;
+}
+.form-controle textarea.mark {
+  height: 300px;
+}

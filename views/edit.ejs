@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
+    <title>Edit Markdown Blog</title>
+  </head>
+  <body>
+    <h1 class="title">Edit article</h1>
+    <form action="/articles/<%= article.id %>?_method=PUT" method="post">
+      <%- include("_form_fieldes") %>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
+    <title>Markdown Blog</title>
+  </head>
+  <body>
+    <h1 class="title">Blog Articles</h1>
+    <a href="/articles/new"><button class="succss">+ New article</button></a>
+    <div class="cards">
+      <% articles.forEach(article => { %>
+      <div class="card">
+        <h4><%= article.title %></h4>
+        <h6><%= new Date(article.createdAt).toLocaleDateString() %></h6>
+        <p><%= article.description %></p>
+        <div class="wrap">
+          <a href="/articles/<%= article.slug  %>"
+            ><button class="primary">Show More</button></a
+          >
+          <a href="/articles/edit/<%= article.id %>"
+            ><button class="warning">Edit</button></a
+          >
+          <form
+            action="/articles/<%= article.id  %>?_method=DELETE"
+            method="post"
+            style="display: inline-block"
+          >
+            <button class="danger" type="submit">Delete</button>
+          </form>
+        </div>
+      </div>
+      <% }) %>
+    </div>
+  </body>
+</html>
